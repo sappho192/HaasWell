@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.9.34728.123
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HaasWell-app", "projects\HaasWell-app.vcxproj", "{41785AE4-5B70-4A75-880B-4B418B4E13C6}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HaasWell-aax", "projects\HaasWell-aax.vcxproj", "{DC4B5920-933D-4C82-B842-F34431D55A93}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HaasWell-clap", "projects\HaasWell-clap.vcxproj", "{6D05871E-274A-48CA-A39A-AB1C9D7DC78C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "haaswell-test", "haaswell-test\haaswell-test.vcxproj", "{F9507051-F7B5-4DA9-9450-BDE30CB94D12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{6D05871E-274A-48CA-A39A-AB1C9D7DC78C}.Tracer|ARM64EC.Build.0 = Tracer|ARM64EC
 		{6D05871E-274A-48CA-A39A-AB1C9D7DC78C}.Tracer|x64.ActiveCfg = Tracer|x64
 		{6D05871E-274A-48CA-A39A-AB1C9D7DC78C}.Tracer|x64.Build.0 = Tracer|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Debug|ARM64EC.ActiveCfg = Debug|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Debug|ARM64EC.Build.0 = Debug|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Debug|x64.ActiveCfg = Debug|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Debug|x64.Build.0 = Debug|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Release|ARM64EC.ActiveCfg = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Release|ARM64EC.Build.0 = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Release|x64.ActiveCfg = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Release|x64.Build.0 = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Tracer|ARM64EC.ActiveCfg = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Tracer|ARM64EC.Build.0 = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Tracer|x64.ActiveCfg = Release|x64
+		{F9507051-F7B5-4DA9-9450-BDE30CB94D12}.Tracer|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

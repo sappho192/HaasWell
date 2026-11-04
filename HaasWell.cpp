@@ -49,7 +49,7 @@ void HaasWell::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
   const int nChans = NOutChansConnected();
   const double dB = GetParam(kParamOutput)->Value();
   
-  ProcessOutput(nFrames, nChans, inputs, outputs, dB);
+  haaswell::ProcessOutput(nFrames, nChans, inputs, outputs, dB);
 }
 
 #endif
