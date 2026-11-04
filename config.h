@@ -3,10 +3,10 @@
 #define PLUG_VERSION_HEX 0x00000000
 #define PLUG_VERSION_STR "0.0.0"
 #define PLUG_UNIQUE_ID '18Bt'
-#define PLUG_MFR_ID 'Acme'
-#define PLUG_URL_STR "https://iplug2.github.io"
-#define PLUG_EMAIL_STR "spam@me.com"
-#define PLUG_COPYRIGHT_STR "Copyright 2025 Acme Inc"
+#define PLUG_MFR_ID 'Rltp'
+#define PLUG_URL_STR "https://haaswell.sapphosound.com"
+#define PLUG_EMAIL_STR "to@sapphosound.com"
+#define PLUG_COPYRIGHT_STR "Copyright 2026 RLTP Inc"
 #define PLUG_CLASS_NAME HaasWell
 
 #define BUNDLE_NAME "HaasWell"
@@ -42,16 +42,16 @@
 
 #define AAX_TYPE_IDS 'ITP1'
 #define AAX_TYPE_IDS_AUDIOSUITE 'ITA1'
-#define AAX_PLUG_MFR_STR "Acme"
+#define AAX_PLUG_MFR_STR "Rltp"
 #define AAX_PLUG_NAME_STR "HaasWell\nIPEF"
 #define AAX_PLUG_CATEGORY_STR "Effect"
 #define AAX_DOES_AUDIOSUITE 1
 
 #define VST3_SUBCATEGORY "Fx"
 
-#define CLAP_MANUAL_URL "https://iplug2.github.io/manuals/example_manual.pdf"
-#define CLAP_SUPPORT_URL "https://github.com/iPlug2/iPlug2/wiki"
-#define CLAP_DESCRIPTION "A simple audio effect for modifying gain"
+#define CLAP_MANUAL_URL "https://haaswell.sapphosound.com/docs/manual.pdf"
+#define CLAP_SUPPORT_URL "https://haaswell.sapphosound.com/wiki"
+#define CLAP_DESCRIPTION "Stereo enhancer based on Haas effect"
 #define CLAP_FEATURES "audio-effect"//, "utility"
 
 #define APP_NUM_CHANNELS 2
