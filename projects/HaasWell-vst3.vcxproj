@@ -326,6 +326,7 @@
     <ClInclude Include="..\..\iPlug2\IPlug\VST3\IPlugVST3_Parameter.h" />
     <ClInclude Include="..\..\iPlug2\IPlug\VST3\IPlugVST3_ProcessorBase.h" />
     <ClInclude Include="..\..\iPlug2\IPlug\VST3\IPlugVST3_View.h" />
+    <ClInclude Include="..\dsp\output.h" />
     <ClInclude Include="..\HaasWell.h" />
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>

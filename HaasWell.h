@@ -1,12 +1,13 @@
 #pragma once
 
 #include "IPlug_include_in_plug_hdr.h"
+#include "dsp/output.h"
 
 const int kNumPresets = 1;
 
 enum EParams
 {
-  kParamGain = 0,
+  kParamOutput = 0,
   kNumParams
 };
 

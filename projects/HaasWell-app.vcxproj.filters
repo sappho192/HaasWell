@@ -259,6 +259,9 @@
     <ClInclude Include="..\..\iPlug2\IGraphics\ISender.h">
       <Filter>IGraphics</Filter>
     </ClInclude>
+    <ClInclude Include="..\dsp\output.h">
+      <Filter>dsp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resources">
@@ -290,6 +293,9 @@
     </Filter>
     <Filter Include="IPlug\APP\RTAudioMidi\include">
       <UniqueIdentifier>{649c5de3-b4c2-4de9-8d57-3b1762646259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dsp">
+      <UniqueIdentifier>{d9a7cfe0-f4c5-4e5c-9898-7d492d04aecd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

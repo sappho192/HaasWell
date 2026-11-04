@@ -194,6 +194,9 @@
     <ClInclude Include="..\..\iPlug2\IGraphics\ISender.h">
       <Filter>IGraphics</Filter>
     </ClInclude>
+    <ClInclude Include="..\dsp\output.h">
+      <Filter>dsp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IPlug">
@@ -219,6 +222,9 @@
     </Filter>
     <Filter Include="config">
       <UniqueIdentifier>{8c338368-7512-426b-af83-0f50719ca0bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dsp">
+      <UniqueIdentifier>{c68b5138-badd-4999-84b6-a80ae486632c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

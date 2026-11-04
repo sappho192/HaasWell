@@ -8,7 +8,7 @@
 HaasWell::HaasWell(const InstanceInfo& info)
 : iplug::Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
-  GetParam(kParamGain)->InitDouble("Gain", 0., 0., 100.0, 0.01, "%");
+  GetParam(kParamOutput)->InitDouble("Output", 0, -12, 12, 0.1, "dB");
 
 #if IPLUG_EDITOR // http://bit.ly/2S64BDd
   mMakeGraphicsFunc = [&]() {
@@ -34,7 +34,7 @@ HaasWell::HaasWell(const InstanceInfo& info)
     pGraphics->AttachCornerResizer(EUIResizerMode::Size, true);
     pGraphics->LoadFont("Roboto-Regular", ROBOTO_FN);
     pGraphics->AttachPanelBackground(COLOR_LIGHT_GRAY);
-    pGraphics->AttachControl(new IVSliderControl(sliderBounds, kParamGain), kCtrlTagSlider);
+    pGraphics->AttachControl(new IVSliderControl(sliderBounds, kParamOutput), kCtrlTagSlider);
     pGraphics->AttachControl(new ITextControl(titleBounds, "HaasWell", IText(30)), kCtrlTagTitle);
     WDL_String buildInfoStr;
     GetBuildInfoStr(buildInfoStr, __DATE__, __TIME__);
@@ -47,12 +47,9 @@ HaasWell::HaasWell(const InstanceInfo& info)
 void HaasWell::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
 { 
   const int nChans = NOutChansConnected();
-  const double gain = GetParam(kParamGain)->Value() / 100.;
+  const double dB = GetParam(kParamOutput)->Value();
   
-  for (int s = 0; s < nFrames; s++) {
-    for (int c = 0; c < nChans; c++) {
-      outputs[c][s] = inputs[c][s] * gain;
-    }
-  }
+  ProcessOutput(nFrames, nChans, inputs, outputs, dB);
 }
+
 #endif

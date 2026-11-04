@@ -297,6 +297,7 @@
     <ClInclude Include="..\..\iPlug2\IPlug\IPlugUtilities.h" />
     <ClInclude Include="..\..\iPlug2\IPlug\IPlug_include_in_plug_hdr.h" />
     <ClInclude Include="..\..\iPlug2\IPlug\IPlug_include_in_plug_src.h" />
+    <ClInclude Include="..\dsp\output.h" />
     <ClInclude Include="..\HaasWell.h" />
     <ClInclude Include="..\resources\resource.h" />
   </ItemGroup>
