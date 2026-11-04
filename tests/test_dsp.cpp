@@ -10,6 +10,7 @@ void OutputTest1();
 void OutputTest2();
 void OutputTest3();
 void OutputTest4();
+void OutputTest5();
 
 int main(void) {
 	Section("Output");
@@ -18,6 +19,7 @@ int main(void) {
 	OutputTest2();
 	OutputTest3();
 	OutputTest4();
+	OutputTest5();
 
 	return test::Summary();
 }
@@ -105,4 +107,26 @@ void OutputTest4()
 	ProcessOutput(inBuffers.NumFrames(), inBuffers.NumChannels(), inBuffers.Ptrs(), outBuffers.Ptrs(), 12.0);
 	result = test::Peak(outBuffers[0]);
 	Check(result == 0.0, "[Test 4] Channel mix test (R->L)", test::Fmt("Peak level of left channel: %.9g", result));
+}
+
+/// <summary>
+/// Test: In-place processing
+/// Condition: Same result even when input and output share the same buffer memory.
+/// </summary>
+void OutputTest5()
+{
+	auto inBuffers = test::Buffers<double>(2, 512);
+	test::FillRandom(inBuffers, 42);
+	test::Buffers<double> inPlaceBuffers(inBuffers); // Calling copy constructor
+
+	auto outBuffers = test::Buffers<double>(2, 512);
+
+	ProcessOutput(inBuffers.NumFrames(), inBuffers.NumChannels(), inBuffers.Ptrs(), outBuffers.Ptrs(), -3.0);
+	ProcessOutput(inPlaceBuffers.NumFrames(), inPlaceBuffers.NumChannels(), inPlaceBuffers.Ptrs(), inPlaceBuffers.Ptrs(), -3.0);
+
+	for (int i = 0; i < inPlaceBuffers.NumChannels(); i++) {
+		auto maxAbsDiff = test::MaxAbsDiff(inPlaceBuffers[i], outBuffers[i]);
+		Check(maxAbsDiff == 0.0, test::Fmt("[Test 5] In-place processing (Channel %d)", i),
+			test::Fmt("Difference between in-place and separated buffer processing: %.9g", maxAbsDiff));
+	}
 }
